@@ -948,6 +948,52 @@
             After having downloaded a theme-package (usually a ZIP-file containing a lot of xml files and graphics) extract it including all its sub-directories into a folder in your device or SD card. Afterwards select this folder as base-folder for map themes in c:geo settings. If you have done it right and the theme is valid it should now be selectable from live map via\\
             Live map menu → Map modes → Select map theme
 
+- title: Routing
+  items:
+
+      - title: What is BRouter?
+        id: brouter
+        content: |
+            BRouter is an application that offers offline route calculation using predownloaded OSM data. This application provides this as a service for other applications to use as frontend (such as OsmAnd, Locus, Oruxmaps and c:geo).
+            
+            You can request a route from the cache popup page on the map, from current position to a cache and it will be shown overlayed on the map.
+
+            In combination with caches already stored in c:geo (manually or via GPX import), the possibility for offline logging (e.g. for later fieldnote export) and OSM:offline maps, you will get a full offline solution for caching.
+      
+      - title: Installing BRouter and initial configuration
+        id: brouter-install
+        content: |
+            Download and install the [BRouter Offline Navigation] (https://play.google.com/store/apps/details?id=btools.routingapp&hl=en) application from Google Play.
+            
+            Upon first start you are asked for a place where to store the relevant files and map data. Choose the path with most available free space. (some devices have a virtual SD_card internally with not much available space, so a true SD_card is recommended).
+            Next you see the world map. Use gestures to zoom in until you see the grid. Tap the squares that cover your area of interest to select them for downloading (shown as green). Press "Start download" and wait until completed. Request additional data files or leave the application. (for now)
+            
+            Notes: This application is only a service provider, so you don't actually need it on your home screen. 
+            Each time you start it "Download Manager" mode you will get a warning about high data usage to make you aware of the requirements of your cellular data plan and costs, if applicable.
+
+      - title: Configuring the BRouter service
+        id: brouter-config
+        content: |
+            BRouter acts as a service provider. Once installed and configured, it is the job of the frontend application (such as c:geo) to make use of it.
+            
+            Configuring BRouter: Start BRouter app → Select "BRouter app" to configure routing profile. 
+            Choose your preferred route profile (e.g. car-test, fastbike, trekking, etc). 
+            Configure NO-GO waypoints, if any. Unless you have Locus/Oruxmaps with defined waypoints, there is nothing to select from, so just press "Server-Mode".
+            Choose service-modes and check the appropriate boxes for the selected profile. Press "OK".
+            You are informed about the configured settings. That's it! Press "Exit".            
+            
+            Downloading additional map data: Start BRouter app → Select "Download manager" to get additional map data (or to check your existing coverage).
+            Zoom in to see the grid. Existing data will show up as blue squares. Tap other squares to select for downloading (will show up as green). Press "Start Download".
+            
+            Note: Please refer to [BRouter homepage] (http://brouter.de/brouter/) for more information.
+                        
+      - title: How to use BRouter with c:geo?
+        id: brouter-howto
+        content: |
+            Once you installed and configured BRouter app, you can use it directly from c:geo. Since this feature is available only on the newer Mapsforge map (for now as a BETA feature), make sure to check it in settings. Go to c:geo Menu → Settings → System and check "Mapsforge beta as default"
+            
+            Go to c:geo Live map → tap on a cache (to see popup window) → tap on route button (top, circle with arrow). Route will be calculated and shown from your position to that cache.
+
 - title: Offline caching
   items:
 
